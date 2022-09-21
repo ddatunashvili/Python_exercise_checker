@@ -1,6 +1,8 @@
 
 <h1 style="color:green; text-align:center; ">ინსტრუქცია </h1>
-<p style="color:brown;">!!! კოდი ჩაწერეთ აუცილებლად start end კომენტარებს შორის <br>
+
+<p style="color:brown;">
+!!! კოდი ჩაწერეთ აუცილებლად start end კომენტარებს შორის <br>
 !!! ფუნქციის შიდა კოდის დასრულების შემდგომ წაშალეთ print(function(element_or_variable))<br>
 გამოძახება ან დააკომენტარეთ  ასე -- > # print(function(element_or_variable))
 <p>
