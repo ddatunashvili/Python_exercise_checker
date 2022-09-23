@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import pprint
 # path
@@ -10,7 +11,7 @@ current_path = os.getcwd()
 
 print("checking started ... \n")
 def get_answers():
-    answers_path = Path(current_path + f"\\answers.txt")
+    answers_path = Path(current_path + f"/answers.txt")
     answer_sheet = {}
     with open(answers_path) as ans:
         answers = ans.read().split("\n")
@@ -19,7 +20,8 @@ def get_answers():
             try:
                 answer_sheet[a[0]] = a[1]
             except Exception as e:
-                print(e)
+                pass
+                # print(e)
 
     return answer_sheet
 
@@ -32,26 +34,26 @@ def check_code():
     for key in answers.keys():
         try:
             if str(eval(key)) == answers[key]:
-                print(f"Passed! {key}")
+                # print(f"Passed! {key}")
                 result["correct"]+=1
             else:
                 if answers[key] == f'"{ str(eval(key)) }"' or answers[key] == f"'{ str(eval(key))}'":
-                    print(f"Passed! {key}")
+                    # print(f"Passed! {key}")
                     result["correct"]+=1
                 else:
-                    print("-----")
-                    print(f"Failed! function --> {key}")
-                    print()
-                    print("correct: ",str(eval(key)),"wrong: ", answers[key])
-                    print("-----")
+                    # print("-----")
+                    # print(f"Failed! function --> {key}")
+                    # print()
+                    # print("correct: ",str(eval(key)),"wrong: ", answers[key])
+                    # print("-----")
                     result["wrong"].append(key+" correct: "+answers[key]+" -> result: "+str(eval(key))) 
 
         except Exception as e:
-            print("------")
-            print(key)
-            print(e)
+            # print("------")
+            # print(key)
+            # print(e)
             result["problems"][key.split("(")[0]]= e
-            print("------")
+            # print("------")
 
     result["tests"] = int(len(answers)/3)
    
@@ -67,6 +69,7 @@ def check_code():
 
 result = check_code()
 
+"""
 print("------\n")
 pprint.pprint(result)
 
@@ -76,3 +79,7 @@ for section, problem in result["problems"].items():
     print(f" problem happend on exercise name: {section} \n eror information: {problem}\n\n")
 print("\n------\n")
 print("finished!")
+"""
+
+
+
