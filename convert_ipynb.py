@@ -15,8 +15,8 @@ import time
 def count_filenames(prefix):
     #we shall store all the file names in this list
     filelist = []
-    print(current_path+r"/ipynb_files")
-    for root, dirs, files in os.walk(current_path+r"/ipynb_files"):
+    print(current_path+r"\ipynb_files")
+    for root, dirs, files in os.walk(current_path+r"\ipynb_files"):
         for file in files:
             #append the file name to the list
             filelist.append(os.path.join(root,file))
@@ -40,8 +40,8 @@ for i in range(1,ipynb_count+1):
     try:
         print(f"converting...")
         time.sleep(2)
-        ipynb_path = Path(current_path + f"/ipynb_files/ex_"+str(i)+".ipynb")
-        py_path = Path(current_path + f"/py_files/ex.py")
+        ipynb_path = Path(current_path + f"\ipynb_files\ex_"+str(i)+".ipynb")
+        py_path = Path(current_path + f"\py_files\ex.py")
         print(ipynb_path)
         with open(ipynb_path) as fp:
             notebook = read(fp, NO_CONVERT)

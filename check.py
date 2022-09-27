@@ -11,7 +11,7 @@ current_path = os.getcwd()
 
 print("checking started ... \n")
 def get_answers():
-    answers_path = Path(current_path + f"/answers.txt")
+    answers_path = Path(current_path + r"\answers.txt")
     answer_sheet = {}
     with open(answers_path) as ans:
         answers = ans.read().split("\n")
