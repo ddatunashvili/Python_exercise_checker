@@ -36,24 +36,26 @@ if ipynb_count == 0:
     sys.exit(f"there is no 'ipynb' file in current_path (directory) --->  {current_path}\ipynb_files")
 
 # get all python code results and convert to txt
-for i in range(1,ipynb_count+1):
-    try:
-        print(f"converting...")
-        time.sleep(2)
-        ipynb_path = Path(current_path + f"\ipynb_files\ex_"+str(i)+".ipynb")
-        py_path = Path(current_path + f"\py_files\ex.py")
-        print(ipynb_path)
-        with open(ipynb_path) as fp:
-            notebook = read(fp, NO_CONVERT)
-        cells = notebook['cells']
-        code_cells = [c for c in cells if c['cell_type'] == 'code']
+
+try:
+    print(f"converting...")
+    time.sleep(2)
+    ipynb_path = Path(current_path + f"\ipynb_files\ex.ipynb")
+    py_path = Path(current_path + f"\py_files\ex.py")
+    print(ipynb_path)
+    with open(ipynb_path,encoding="utf8") as fp:
+        notebook = read(fp, NO_CONVERT)
+    cells = notebook['cells']
+    code_cells = [c for c in cells if c['cell_type'] == 'code']
+    result_ = ""
+    for cell in code_cells:
+        code = cell['source'].replace("#__start__","\n\n") 
+        code = code.replace("#__end__","\n\n") 
+        result_ += code
+    with open(py_path,"w") as f:
+        f.writelines(result_)
         result_ = ""
-        for cell in code_cells:
-            result_ +=  cell['source'] 
-        with open(py_path,"w") as f:
-            f.writelines(result_)
-            result_ = ""
-    except Exception as e:
-        print(e)
-        print(f"ex_{i}.ipynb not fount")
-    print("converting done !")
+except Exception as e:
+    print(e)
+    print(f"ex.ipynb not fount")
+print("converting done !")

@@ -1,49 +1,22 @@
-#__start__
-def addition_1(a,b):
-  return a + b
 
-#__end__#__start__
 
-def addition(n):
-  return n + 1
 
-#__end__#__start__
 
-def convert(n):
-  return n*60
-#__end__#__start__
 
-def cubes(a):
-    return a ** 3
 
-#__end__
-#__start__
-def dis(price, discount):
-  percent = price*discount/100
-  return int(price - percent)
-print(dis(1500,50))
+def persistence(num):
+  if num < 10:
+    return 0
+  num_str = str(num)
+  total = 1
+  for i in num_str:
+    total = total * int(i)
+  return 1 + persistence(total)
+ 
+  
 
-#__end__#__start__
-def calc_age(age):
-  return age*365
 
-#__end__
-#__start__
-def string_int(string):
-  return int(string)
 
-#__end__#__start__
-def find_perimeter(length, width):
-  return  (length + width)*2
-#__end__#__start__
-def greeting(name):
-    if name == "Murtaz":
-        return "Hello, my Love!"
-    else:
-      return "Hello, " + name + "!"
 
-#__end__#__start__
-def stutter(text):
-  return text[:2] + "... " + text[:2] + "... " + text+"?"
-
-#__end__
+def test_code(function_name, parameter, correct_result):
+  return True if i in i else False
