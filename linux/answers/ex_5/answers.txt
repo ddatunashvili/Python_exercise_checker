@@ -1,0 +1,6 @@
+persistence(27)->2
+persistence(111)->1
+persistence(4)->0
+test_code(is_one, True, 1)->True
+test_code(is_none, 3, False)->True
+test_code(is_none, correct_result=True)->True

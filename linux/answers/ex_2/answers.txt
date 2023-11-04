@@ -1,0 +1,30 @@
+football_points(3, 4, 2)->13
+football_points(5, 0, 2)->15
+football_points(0, 0, 1)->0
+divisible(1)->False
+divisible(1000)->True
+divisible(100)->True
+calculator("23+4")->27
+calculator("45-15")->30
+calculator("13+2-5*2")->5
+is_seven(4)->False
+is_seven(9)->False
+is_seven(7)->True
+calculate_fuel(15)->150
+calculate_fuel(23.5)->235
+calculate_fuel(3)->100
+bool_to_string(True)->"True"
+bool_to_string(False)->"False"
+bool_to_string(False)->"False"
+to_str(77)->"77"
+to_str(532)->"532"
+to_str(532)->"532"
+to_int("77")->77
+to_int("77")->77
+to_int("77")->77
+order("Chicken")->"Chicken?! ok, it will be soon"
+order("Juice")->"Juice?! ok, it will be soon"
+order("Wine")->"Wine?! ok, it will be soon"
+type_change(77)->"77"
+type_change('77')->77
+type_change(123)->"123"

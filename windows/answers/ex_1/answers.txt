@@ -1,0 +1,30 @@
+addition_1(3,2)->5
+addition_1(-3,-6)->-9
+addition_1(7,3)->10
+addition(0)->1
+addition(9)->10
+addition(-3)->-2
+convert(5)->300
+convert(3)->180
+convert(2)->120
+cubes(3)->27
+cubes(5)->125
+cubes(10)->1000
+dis(1500, 50)->750
+dis(89, 20)->71
+dis(100, 75)->25
+calc_age(65)->23725
+calc_age(0)->0
+calc_age(20)->7300
+string_int("6")->6
+string_int("1000")->1000
+string_int("12")->12
+find_perimeter(6, 7)->26
+find_perimeter(20, 10)->60
+find_perimeter(2, 9)->22
+greeting("Nika")->"Hello, Nika!"
+greeting("Lela")->"Hello, Lela!"
+greeting("Murtaz")->"Hello, my Love!"
+stutter("incredible")->"in... in... incredible?"
+stutter("enthusiastic")->"en... en... enthusiastic?"
+stutter("outstanding")->"ou... ou... outstanding?"

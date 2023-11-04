@@ -1,0 +1,15 @@
+increment(7)->8
+increment(-1)->0
+increment(19)->20
+to_dict([1,"1",2,"1"])->{1:"1",2:"1"} 
+to_dict([9,1,9,1])->{9:1,9:1}
+to_dict([4,10.1,12,1])->{4:10.1,12:1}
+common_elements([1,1,1,5],[5,5,7,6])->"5"
+common_elements([0,0,1],[1,1,1])->"1"
+common_elements([101010101,1,5],[1,2,4,5,6,7])->"5"
+encrypt("tqjefs")->"spider"
+encrypt('dbu')->"cat"
+encrypt('pup')->"oto"
+common_position((3,4,6,2,3,2,3))->"0,3"
+common_position((55,11,22,33,22,44,22))->"0,5"
+common_position((1,0,2,1,2,0,1,1))->"0,3,4,5,6"
